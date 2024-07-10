@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0 !important;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+/* section{
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+} */
+.page-heading {
+    color: #070439;
+    font-family: 'Raleway' !important;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.page-paragraph {
+    color: #070439;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+}
+

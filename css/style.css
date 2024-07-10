@@ -1,0 +1,152 @@
+/*#region header*/
+ul {
+  gap: 1.47444rem;
+}
+
+header a {
+  color: #070439;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+header {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+
+}
+
+/*#endregion header*/
+/*#region hero*/
+.hero-content {
+  gap: 1.47rem;
+}
+
+.hero-img img {
+  width: 100%;
+}
+
+.hero-content form input {
+  padding: 0.6875rem 2.08113rem 0.6875rem 2.0625rem;
+  border: 1px solid #000;
+  background: #FFF;
+  width: 46%;
+}
+
+.hero-content form input::placeholder,
+.early form input::placeholder {
+  color: #757575;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero-content form .btn {
+  padding: 0.625rem 4.60994rem 0.625rem 4.62063rem;
+  background: #3065F8;
+  color: white;
+  border-radius: 0;
+  transition: 0.4s;
+}
+
+.hero-content form .btn:hover {
+  background-color: white;
+  color: #3065F8;
+  border: 1px solid #3065F8;
+}
+
+form {
+  gap: 1.88rem;
+}
+
+@media screen and (max-width:768px) {
+
+  .hero-content form input,
+  .hero-content form .btn {
+    width: 100%;
+  }
+}
+
+/*#endregion hero*/
+/*#region stay*/
+.stay {
+  position: relative;
+  background: #F8F8FE;
+}
+
+.stay::before {
+  content: "";
+  background-image: url(../img/Vector.png);
+  position: absolute;
+}
+
+.stay a {
+  color: #3C9F8F;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  ;
+}
+
+.stay a:hover {
+  text-decoration: none;
+}
+
+/*#endregion stay*/
+/*#endregion stay*/
+.early {
+  background-color: #585989;
+  height: 60vh;
+}
+
+.early h3 {
+  color: #FFF;
+  font-family: 'Raleway';
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.early p {
+  color: #FFF;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.early form input {
+  padding: 0.6875rem 2.0625rem;
+  border: 1px solid #000;
+  background: #FFF;
+}
+
+.early form .btn {
+  padding: 0.625rem 1.23019rem 0.625rem 1.25rem;
+  color: #FFF;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #3065F8;
+  width: 50%;
+  border-radius: 0;
+}
+.early form .btn:hover{
+  background-color: white;
+  color: #3065F8;
+  border: 1px solid #3065F8;
+}
+
+/*#endregion stay*/
+/*#region footer*/
+  footer{
+    background-color: #070439;
+  }
+/*#endregion footer*/

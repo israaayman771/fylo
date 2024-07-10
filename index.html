@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fylo</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- fonts css -->
+    <link rel="stylesheet" href="./fonts/font.css" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body>
+    <!-- #region header -->
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTY3IiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTY3IDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBpZD0ibG9nby5zdmciIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8xXzgpIj4KPGcgaWQ9Ikdyb3VwIj4KPHBhdGggaWQ9IlZlY3RvciIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjUgMTQuNjNWMTQuNzUzTDI4LjQ1IDI3Ljg4M0w1Ni41IDE0LjcwOVYxNC42NzZMMjguNDUgMS41TDAuNSAxNC42M1pNMTAuNTc3IDE0LjY5MkwyOC40NSA2LjI5NUw0Ni4zMjcgMTQuNjkyTDI4LjQ1IDIzLjA4OEwxMC41NzcgMTQuNjkyWk0yOC40NSAzMi45ODNMMC41IDIwLjA1VjI0LjgzNEwyOC40NSAzNy43OThMNTYuNSAyNC43ODlWMjAuMDA1TDI4LjQ1IDMyLjk4M1pNMjguNDUgNDIuNjg2TDAuNSAyOS43NVYzNC41MzNMMjguNDUgNDcuNUw1Ni41IDM0LjQ5VjI5LjcwNkwyOC40NSA0Mi42ODZaIiBmaWxsPSIjQkRCQUZBIi8+CjxnIGlkPSJHcm91cF8yIj4KPGcgaWQ9Ik1hc2sgZ3JvdXAiPgo8bWFzayBpZD0ibWFzazBfMV84IiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iNzIiIHk9IjAiIHdpZHRoPSI5NSIgaGVpZ2h0PSI0OSI+CjxnIGlkPSJHcm91cF8zIj4KPHBhdGggaWQ9IlZlY3Rvcl8yIiBkPSJNNzIuNTE0IDAuNTI5OTk5SDE2Ni40NzRWNDguODJINzIuNTE1TDcyLjUxNCAwLjUyOTk5OVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzFfOCkiPgo8cGF0aCBpZD0iVmVjdG9yXzMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTYwLjA2IDI0LjY1MkMxNjAuMDc2IDIyLjU4NjggMTU5LjMwMyAyMC41OTMyIDE1Ny44OTkgMTkuMDc5QzE1Ny4yMzggMTguMzcwOCAxNTYuNDQzIDE3LjgwMiAxNTUuNTU5IDE3LjQwNkMxNTQuNjYzIDE3LjAwNDEgMTUzLjY5MSAxNi43OTkxIDE1Mi43MDkgMTYuODA1QzE1MS42OTkgMTYuODA1IDE1MC43NDggMTcuMDA1IDE0OS44NTcgMTcuNDA2QzE0OC45NzMgMTcuODAxOSAxNDguMTc4IDE4LjM3MDggMTQ3LjUxNyAxOS4wNzlDMTQ2LjExMyAyMC41OTM3IDE0NS4zNCAyMi41ODc2IDE0NS4zNTcgMjQuNjUzQzE0NS4zNCAyNi43MTgxIDE0Ni4xMTMgMjguNzExNSAxNDcuNTE3IDMwLjIyNkMxNDguMTc4IDMwLjkzMzggMTQ4Ljk3MyAzMS41MDIzIDE0OS44NTcgMzEuODk4QzE1MC43NTMgMzIuMzAwNCAxNTEuNzI1IDMyLjUwNTcgMTUyLjcwOCAzMi41QzE1My43MTggMzIuNSAxNTQuNjY4IDMyLjMgMTU1LjU2IDMxLjg5OEMxNTYuNDQzIDMxLjUwMjIgMTU3LjIzOSAzMC45MzM3IDE1Ny44OTkgMzAuMjI2QzE1OS4zMDMgMjguNzExNCAxNjAuMDc3IDI2LjcxNzQgMTYwLjA2IDI0LjY1MlpNMTY2LjQ3NSAyNC42NTJDMTY2LjQ3NSAyNi41ODQgMTY2LjExOCAyOC4zNzUgMTY1LjQwNSAzMC4wMjVDMTY0LjcyIDMxLjYzMzYgMTYzLjcyMSAzMy4wODg4IDE2Mi40NjUgMzQuMzA1QzE2MS4yMTggMzUuNTEgMTU5Ljc1NSAzNi40NjEgMTU4LjA3NyAzNy4xNTlDMTU2LjM5OSAzNy44NTggMTU0LjYwOSAzOC4yMDcgMTUyLjcwOCAzOC4yMDdDMTUwLjgwOCAzOC4yMDcgMTQ5LjAyNSAzNy44NTggMTQ3LjM2MiAzNy4xNTlDMTQ1LjczNyAzNi40ODU5IDE0NC4yNTYgMzUuNTA5OSAxNDIuOTk2IDM0LjI4M0MxNDEuNzQzIDMzLjA1NiAxNDAuNzQ0IDMxLjU5NDIgMTQwLjA1NiAyOS45ODFDMTM5LjM0MyAyOC4zMzEgMTM4Ljk4NiAyNi41NTUgMTM4Ljk4NiAyNC42NTJDMTM4Ljk4NiAyMi43NzkgMTM5LjM1IDIxLjAxOCAxNDAuMDc4IDE5LjM2OEMxNDAuNzgyIDE3Ljc1MTggMTQxLjc4OCAxNi4yODQxIDE0My4wNCAxNS4wNDNDMTQ0LjI5NSAxMy44MDQ0IDE0NS43NzggMTIuODIwMyAxNDcuNDA3IDEyLjE0NUMxNDkuMDg2IDExLjQ0MzMgMTUwLjg4OSAxMS4wODY5IDE1Mi43MDggMTEuMDk3QzE1NC42MDkgMTEuMDk3IDE1Ni4zOTggMTEuNDQ3IDE1OC4wNzcgMTIuMTQ1QzE1OS43NTUgMTIuODQzIDE2MS4yMTcgMTMuNzk1IDE2Mi40NjUgMTQuOTk5QzE2My43MTMgMTYuMjAzIDE2NC42OTMgMTcuNjM3IDE2NS40MDUgMTkuMzAxQzE2Ni4xMTggMjAuOTY2IDE2Ni40NzUgMjIuNzUgMTY2LjQ3NSAyNC42NTJaTTEzNi43NTggMzcuNDA1QzEzNi4yMDggMzcuNjU4MSAxMzUuNjMzIDM3Ljg1MjUgMTM1LjA0MyAzNy45ODVDMTM0LjQwNSAzOC4xMzMgMTMzLjc0MyAzOC4yMDcgMTMzLjA2MSAzOC4yMDdDMTMyLjEzNCAzOC4yMTAzIDEzMS4yMTIgMzguMDgyNyAxMzAuMzIxIDM3LjgyOEMxMjkuNDc2IDM3LjU5MiAxMjguNjkyIDM3LjE3MzUgMTI4LjAyNiAzNi42MDJDMTI3LjM3MyAzNi4wMzcgMTI2Ljg1MyAzNS4zMDIgMTI2LjQ2NiAzNC4zOTVDMTI2LjA4MSAzMy40ODggMTI1Ljg4OCAzMi4zOTUgMTI1Ljg4OCAzMS4xMThWMC41Mjg5OTJIMTMyLjQzN1YzMC4wMDNDMTMyLjQzNyAzMS4wNzMgMTMyLjY1MiAzMS44MDkgMTMzLjA4MyAzMi4yMUMxMzMuNTEzIDMyLjYxMSAxMzQuMDI2IDMyLjgxMiAxMzQuNjIgMzIuODEyQzEzNS4zNjIgMzIuODEyIDEzNi4wNzUgMzIuNTg5IDEzNi43NTggMzIuMTQzVjM3LjQwNVpNMTIyLjk5MiAxMS43MkwxMTEuNDA4IDQyLjM1NEMxMTAuNTQ3IDQ0LjY0MyAxMDkuNDE4IDQ2LjI5MyAxMDguMDIyIDQ3LjMwNEMxMDYuNjI2IDQ4LjMxNCAxMDQuOTYyIDQ4LjgxOSAxMDMuMDMyIDQ4LjgxOUMxMDIuNzM1IDQ4LjgxOSAxMDIuNDA5IDQ4Ljc5NyAxMDIuMDUyIDQ4Ljc1M0MxMDEuNzA2IDQ4LjcxMDQgMTAxLjM2MyA0OC42NDMyIDEwMS4wMjcgNDguNTUyTDk4Ljg4OSA0Mi41NzdDOTkuMzg5NSA0Mi44MTMxIDk5LjkxMiA0Mi45OTk2IDEwMC40NDkgNDMuMTM0QzEwMC45ODMgNDMuMjY4IDEwMS40ODggNDMuMzM1IDEwMS45NjMgNDMuMzM1QzEwMi45NzMgNDMuMzM1IDEwMy44OTMgNDMuMTA1IDEwNC43MjUgNDIuNjQ0QzEwNS41NTcgNDIuMTg0IDEwNi4xOTUgNDEuMzI5IDEwNi42NDEgNDAuMDhMMTA3LjUzMiAzNy40OTRMOTcuNTk3IDExLjcyMUgxMDQuNTkyTDExMC41MTcgMjguMzA5TDExNi4wODcgMTEuNzIxTDEyMi45OTIgMTEuNzJaTTk2LjAzOCA3Ljg0MTk5SDc5LjI4NlYxNi4xMzZIOTUuODE1VjIxLjc1NEg3OS4yODVWMzcuNTM4SDcyLjUxNVYxLjkxMTk5SDk2LjAzOUw5Ni4wMzggNy44NDE5OVoiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xXzgiPgo8cmVjdCB3aWR0aD0iMTY2IiBoZWlnaHQ9IjQ5IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC41IDAuNSkiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K"
+                    alt="">
+            </div>
+            <nav class="navbar">
+                <ul class="d-flex">
+                    <li>
+                        <a href="#">Features</a>
+                    </li>
+                    <li>
+                        <a href="#">Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign in</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- #endregion haeder -->
+    <!-- #region hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="hero-content d-flex flex-column">
+                        <h1 class="page-heading">
+                            All your files in one
+                            secure location,
+                            accessible anywhere.
+                        </h1>
+                        <p class="page-paragraph">
+                            Fylo stores your most important files in one secure location. Access them wherever
+                            you need, share and collaborate with friends, family, and co-workers.
+                        </p>
+                        <form action="" class="d-flex flex-wrap form-group">
+                            <input type="email" placeholder="Enter your email...">
+                            <button type="submit" class="btn"> Get started </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="hero-img">
+                        <img src="./img/hero-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #endregion hero -->
+    <!-- #region stay -->
+
+    <section class="stay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="stay-content d-flex flex-column gap-4">
+                        <h2 class="page-heading">
+                            Stay productive,
+                            wherever you are
+                        </h2>
+                        <div class="d-flex flex-column gap-3">
+                            <p class="page-paragraph">
+                                Never let location be an issue when accessing your files. Fylo has you covered
+                                for all of your file storage needs.
+                            </p>
+                            <p class="page-paragraph">
+                                Securely share files and folders with friends, family and colleagues for live
+                                collaboration. No email attachments required!
+                            </p>
+                        </div>
+                        <a href="#" class="d-flex align-items-center gap-1">
+                            See How Fylo Works
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                fill="none">
+                                <g clip-path="url(#clip0_1_185)">
+                                    <g filter="url(#filter0_d_1_185)">
+                                        <path
+                                            d="M8.66998 14.5C11.9837 14.5 14.67 11.8137 14.67 8.5C14.67 5.18629 11.9837 2.5 8.66998 2.5C5.35627 2.5 2.66998 5.18629 2.66998 8.5C2.66998 11.8137 5.35627 14.5 8.66998 14.5Z"
+                                            fill="black" />
+                                    </g>
+                                    <path
+                                        d="M8.66998 14.5C11.9837 14.5 14.67 11.8137 14.67 8.5C14.67 5.18629 11.9837 2.5 8.66998 2.5C5.35627 2.5 2.66998 5.18629 2.66998 8.5C2.66998 11.8137 5.35627 14.5 8.66998 14.5Z"
+                                        fill="#3DA08F" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.25199 6.5L8.88899 6.85L10.341 8.25H6.00299V8.75H10.341L8.88999 10.15L9.25299 10.5L11.327 8.5L9.25199 6.5Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_1_185" x="0.669983" y="0.5" width="16" height="16"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset />
+                                        <feGaussianBlur stdDeviation="1" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.239216 0 0 0 0 0.627451 0 0 0 0 0.560784 0 0 0 0.793507 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_1_185" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_185"
+                                            result="shape" />
+                                    </filter>
+                                    <clipPath id="clip0_1_185">
+                                        <rect width="16" height="16" fill="white" transform="translate(0.669983 0.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="hero-img">
+                        <img src="./img/stay-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #endregion stay -->
+    <!-- #region early -->
+    <section class="early d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-7">
+                    <div class=" d-flex flex-column gap-4">
+                        <h3 class="">
+                            Get early access today
+                        </h3>
+                        <p class="page-paragraph">
+                            It only takes a minute to sign up and our free starter tier is extremely generous. If you
+                            have any questions, our support team would be happy to help you.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <form action="" class="d-flex  flex-column">
+                        <input type="email" placeholder="email@example.com">
+                        <button type="submit" class="btn"> Get Started For Free</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #endregion stay -->
+     <!-- #region footer -->
+      <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTY3IiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTY3IDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBpZD0iU1ZHIj4KPGcgaWQ9Ikdyb3VwIj4KPHBhdGggaWQ9IlZlY3RvciIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjUgMTQuNjNWMTQuNzUzTDI4LjQ1IDI3Ljg4M0w1Ni41IDE0LjcwOVYxNC42NzZMMjguNDUgMS41TDAuNSAxNC42M1pNMTAuNTc3IDE0LjY5MkwyOC40NSA2LjI5NUw0Ni4zMjcgMTQuNjkyTDI4LjQ1IDIzLjA4OEwxMC41NzcgMTQuNjkyWk0yOC40NSAzMi45ODNMMC41IDIwLjA1VjI0LjgzNEwyOC40NSAzNy43OThMNTYuNSAyNC43ODlWMjAuMDA1TDI4LjQ1IDMyLjk4M1pNMjguNDUgNDIuNjg2TDAuNSAyOS43NVYzNC41MzNMMjguNDUgNDcuNUw1Ni41IDM0LjQ5VjI5LjcwNkwyOC40NSA0Mi42ODZaIiBmaWxsPSJ3aGl0ZSIvPgo8ZyBpZD0iR3JvdXBfMiI+CjxnIGlkPSJNYXNrIGdyb3VwIj4KPG1hc2sgaWQ9Im1hc2swXzFfMzkzIiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iNzIiIHk9IjAiIHdpZHRoPSI5NSIgaGVpZ2h0PSI0OSI+CjxnIGlkPSJHcm91cF8zIj4KPHBhdGggaWQ9IlZlY3Rvcl8yIiBkPSJNNzIuNTE0IDAuNTMwMDI5SDE2Ni40NzRWNDguODJINzIuNTE1TDcyLjUxNCAwLjUzMDAyOVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzFfMzkzKSI+CjxwYXRoIGlkPSJWZWN0b3JfMyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNjAuMDYgMjQuNjUyMUMxNjAuMDc2IDIyLjU4NjggMTU5LjMwMyAyMC41OTMzIDE1Ny44OTkgMTkuMDc5MUMxNTcuMjM4IDE4LjM3MDkgMTU2LjQ0MyAxNy44MDIgMTU1LjU1OSAxNy40MDYxQzE1NC42NjMgMTcuMDA0MSAxNTMuNjkxIDE2Ljc5OTIgMTUyLjcwOSAxNi44MDUxQzE1MS42OTkgMTYuODA1MSAxNTAuNzQ4IDE3LjAwNTEgMTQ5Ljg1NyAxNy40MDYxQzE0OC45NzMgMTcuODAyIDE0OC4xNzggMTguMzcwOCAxNDcuNTE3IDE5LjA3OTFDMTQ2LjExMyAyMC41OTM4IDE0NS4zNCAyMi41ODc2IDE0NS4zNTcgMjQuNjUzMUMxNDUuMzQgMjYuNzE4MSAxNDYuMTEzIDI4LjcxMTYgMTQ3LjUxNyAzMC4yMjYxQzE0OC4xNzggMzAuOTMzOSAxNDguOTczIDMxLjUwMjQgMTQ5Ljg1NyAzMS44OTgxQzE1MC43NTMgMzIuMzAwNCAxNTEuNzI1IDMyLjUwNTcgMTUyLjcwOCAzMi41MDAxQzE1My43MTggMzIuNTAwMSAxNTQuNjY4IDMyLjMwMDEgMTU1LjU2IDMxLjg5ODFDMTU2LjQ0MyAzMS41MDIyIDE1Ny4yMzkgMzAuOTMzOCAxNTcuODk5IDMwLjIyNjFDMTU5LjMwMyAyOC43MTE0IDE2MC4wNzcgMjYuNzE3NSAxNjAuMDYgMjQuNjUyMVpNMTY2LjQ3NSAyNC42NTIxQzE2Ni40NzUgMjYuNTg0MSAxNjYuMTE4IDI4LjM3NTEgMTY1LjQwNSAzMC4wMjUxQzE2NC43MiAzMS42MzM2IDE2My43MjEgMzMuMDg4OSAxNjIuNDY1IDM0LjMwNTFDMTYxLjIxOCAzNS41MTAxIDE1OS43NTUgMzYuNDYxMSAxNTguMDc3IDM3LjE1OTFDMTU2LjM5OSAzNy44NTgxIDE1NC42MDkgMzguMjA3MSAxNTIuNzA4IDM4LjIwNzFDMTUwLjgwOCAzOC4yMDcxIDE0OS4wMjUgMzcuODU4MSAxNDcuMzYyIDM3LjE1OTFDMTQ1LjczNyAzNi40ODYgMTQ0LjI1NiAzNS41MSAxNDIuOTk2IDM0LjI4MzFDMTQxLjc0MyAzMy4wNTYxIDE0MC43NDQgMzEuNTk0MiAxNDAuMDU2IDI5Ljk4MTFDMTM5LjM0MyAyOC4zMzExIDEzOC45ODYgMjYuNTU1MSAxMzguOTg2IDI0LjY1MjFDMTM4Ljk4NiAyMi43NzkxIDEzOS4zNSAyMS4wMTgxIDE0MC4wNzggMTkuMzY4MUMxNDAuNzgyIDE3Ljc1MTggMTQxLjc4OCAxNi4yODQxIDE0My4wNCAxNS4wNDMxQzE0NC4yOTUgMTMuODA0NSAxNDUuNzc4IDEyLjgyMDQgMTQ3LjQwNyAxMi4xNDUxQzE0OS4wODYgMTEuNDQzNCAxNTAuODg5IDExLjA4NyAxNTIuNzA4IDExLjA5NzFDMTU0LjYwOSAxMS4wOTcxIDE1Ni4zOTggMTEuNDQ3MSAxNTguMDc3IDEyLjE0NTFDMTU5Ljc1NSAxMi44NDMxIDE2MS4yMTcgMTMuNzk1MSAxNjIuNDY1IDE0Ljk5OTFDMTYzLjcxMyAxNi4yMDMxIDE2NC42OTMgMTcuNjM3MSAxNjUuNDA1IDE5LjMwMTFDMTY2LjExOCAyMC45NjYxIDE2Ni40NzUgMjIuNzUwMSAxNjYuNDc1IDI0LjY1MjFaTTEzNi43NTggMzcuNDA1MUMxMzYuMjA4IDM3LjY1ODIgMTM1LjYzMyAzNy44NTI2IDEzNS4wNDMgMzcuOTg1MUMxMzQuNDA1IDM4LjEzMzEgMTMzLjc0MyAzOC4yMDcxIDEzMy4wNjEgMzguMjA3MUMxMzIuMTM0IDM4LjIxMDQgMTMxLjIxMiAzOC4wODI4IDEzMC4zMjEgMzcuODI4MUMxMjkuNDc2IDM3LjU5MjEgMTI4LjY5MiAzNy4xNzM2IDEyOC4wMjYgMzYuNjAyMUMxMjcuMzczIDM2LjAzNzEgMTI2Ljg1MyAzNS4zMDIxIDEyNi40NjYgMzQuMzk1MUMxMjYuMDgxIDMzLjQ4ODEgMTI1Ljg4OCAzMi4zOTUxIDEyNS44ODggMzEuMTE4MVYwLjUyOTA1M0gxMzIuNDM3VjMwLjAwMzFDMTMyLjQzNyAzMS4wNzMxIDEzMi42NTIgMzEuODA5MSAxMzMuMDgzIDMyLjIxMDFDMTMzLjUxMyAzMi42MTExIDEzNC4wMjYgMzIuODEyMSAxMzQuNjIgMzIuODEyMUMxMzUuMzYyIDMyLjgxMjEgMTM2LjA3NSAzMi41ODkxIDEzNi43NTggMzIuMTQzMVYzNy40MDUxWk0xMjIuOTkyIDExLjcyMDFMMTExLjQwOCA0Mi4zNTQxQzExMC41NDcgNDQuNjQzMSAxMDkuNDE4IDQ2LjI5MzEgMTA4LjAyMiA0Ny4zMDQxQzEwNi42MjYgNDguMzE0MSAxMDQuOTYyIDQ4LjgxOTEgMTAzLjAzMiA0OC44MTkxQzEwMi43MzUgNDguODE5MSAxMDIuNDA5IDQ4Ljc5NzEgMTAyLjA1MiA0OC43NTMxQzEwMS43MDYgNDguNzEwNCAxMDEuMzYzIDQ4LjY0MzMgMTAxLjAyNyA0OC41NTIxTDk4Ljg4OSA0Mi41NzcxQzk5LjM4OTUgNDIuODEzMSA5OS45MTIgNDIuOTk5NyAxMDAuNDQ5IDQzLjEzNDFDMTAwLjk4MyA0My4yNjgxIDEwMS40ODggNDMuMzM1MSAxMDEuOTYzIDQzLjMzNTFDMTAyLjk3MyA0My4zMzUxIDEwMy44OTMgNDMuMTA1MSAxMDQuNzI1IDQyLjY0NDFDMTA1LjU1NyA0Mi4xODQxIDEwNi4xOTUgNDEuMzI5MSAxMDYuNjQxIDQwLjA4MDFMMTA3LjUzMiAzNy40OTQxTDk3LjU5NyAxMS43MjExSDEwNC41OTJMMTEwLjUxNyAyOC4zMDkxTDExNi4wODcgMTEuNzIxMUwxMjIuOTkyIDExLjcyMDFaTTk2LjAzOCA3Ljg0MjA1SDc5LjI4NlYxNi4xMzYxSDk1LjgxNVYyMS43NTQxSDc5LjI4NVYzNy41MzgxSDcyLjUxNVYxLjkxMjA1SDk2LjAzOUw5Ni4wMzggNy44NDIwNVoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPC9nPgo8L3N2Zz4K" alt="">
+
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Phone: +1-543-123-4567
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                example@fylo.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Press
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Privacy
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/facebook.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/twitter.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/instagram.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+    <!-- bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
