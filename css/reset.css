@@ -5,6 +5,7 @@
 
 ul {
     list-style: none;
+    padding-left: 0 !important;
 }
 
 a {
@@ -16,10 +17,10 @@ a {
     margin-left: auto !important;
     margin-right: auto !important;
 }
-/* section{
-    margin-top: 3rem !important;
-    margin-bottom: 3rem !important;
-} */
+section{
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
 .page-heading {
     color: #070439;
     font-family: 'Raleway' !important;
